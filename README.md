@@ -3,6 +3,8 @@ BetterValorant is a tool made in C# to make valorant players life easier!
 
 ## Features
 
+- Automatic Login
+- Automatic Launch (You can just run the app and click "Yes")
 - Instant select agent
 - Deselect agent even if you have already locked in
 - See Teammates & opponents
