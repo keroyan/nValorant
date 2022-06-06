@@ -11,3 +11,6 @@ BetterValorant is a tool made in C# to make valorant players life easier!
   - and more
 - See your stats more in deep
 
+## Readme
+
+This tool doesn't store any of your information and uses Riot Games api to e.g instantly select an agent, this tool is not endorsed by Riot Games in any way.
