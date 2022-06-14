@@ -1,5 +1,5 @@
 # BetterValorant
-BetterValorant is a tool made in C# to make valorant players life easier!
+BetterValorant is a tool made in C++ to make valorant players life easier!
 
 ## Features
 
