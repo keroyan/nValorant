@@ -1,9 +1,9 @@
-# BetterValorant
-BetterValorant is a tool made in C++ to make valorant players life easier!
+# nValorant
+nValorant is a tool made in C++ to make valorant players life easier!
 
 ## Features
 
-- Automatic Login
+- Manuell Login
 - Automatic Launch (You can just run the app and click "Yes")
 - Instant Lock
 - Deselect agent even if you have already locked in
@@ -12,6 +12,13 @@ BetterValorant is a tool made in C++ to make valorant players life easier!
   - Level
   - and more
 - See your stats more in deep
+
+## Libaries
+
+- ImGui
+  - For the user interface
+- libcpr
+  - For requests
 
 ## Readme
 
