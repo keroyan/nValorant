@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{4c4d3c65-ea0c-4cd7-a1ff-45ac26be0dfa}</ProjectGuid>
+    <RootNamespace>nValorant</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);IMGUI_DEFINE_MATH_OPERATORS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\cow\source\repos\nValorant\nValorant\vendor;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\cow\source\repos\nValorant\nValorant\vendor\curl\lib;$(DXSDK_DIR)Lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcurl.lib;zlib.lib;Crypt32.lib;ws2_32.lib;winmm.lib;wldap32.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);IMGUI_DEFINE_MATH_OPERATORS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\cow\source\repos\nValorant\nValorant\vendor;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\cow\source\repos\nValorant\nValorant\vendor\curl\lib;$(DXSDK_DIR)Lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcurl.lib;zlib.lib;Crypt32.lib;ws2_32.lib;winmm.lib;wldap32.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);IMGUI_DEFINE_MATH_OPERATORS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\cow\source\repos\nValorant\nValorant\vendor;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\cow\source\repos\nValorant\nValorant\vendor\curl\lib;$(DXSDK_DIR)Lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcurl.lib;zlib.lib;Crypt32.lib;ws2_32.lib;winmm.lib;wldap32.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);IMGUI_DEFINE_MATH_OPERATORS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\cow\source\repos\nValorant\nValorant\vendor;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\cow\source\repos\nValorant\nValorant\vendor\curl\lib;$(DXSDK_DIR)Lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcurl.lib;zlib.lib;Crypt32.lib;ws2_32.lib;winmm.lib;wldap32.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\core\menu.cpp" />
+    <ClCompile Include="vendor\cpr\accept_encoding.cpp" />
+    <ClCompile Include="vendor\cpr\async.cpp" />
+    <ClCompile Include="vendor\cpr\auth.cpp" />
+    <ClCompile Include="vendor\cpr\bearer.cpp" />
+    <ClCompile Include="vendor\cpr\cookies.cpp" />
+    <ClCompile Include="vendor\cpr\cprtypes.cpp" />
+    <ClCompile Include="vendor\cpr\curlholder.cpp" />
+    <ClCompile Include="vendor\cpr\curl_container.cpp" />
+    <ClCompile Include="vendor\cpr\error.cpp" />
+    <ClCompile Include="vendor\cpr\interceptor.cpp" />
+    <ClCompile Include="vendor\cpr\multipart.cpp" />
+    <ClCompile Include="vendor\cpr\parameters.cpp" />
+    <ClCompile Include="vendor\cpr\payload.cpp" />
+    <ClCompile Include="vendor\cpr\proxies.cpp" />
+    <ClCompile Include="vendor\cpr\proxyauth.cpp" />
+    <ClCompile Include="vendor\cpr\redirect.cpp" />
+    <ClCompile Include="vendor\cpr\response.cpp" />
+    <ClCompile Include="vendor\cpr\session.cpp" />
+    <ClCompile Include="vendor\cpr\ssl_ctx.cpp" />
+    <ClCompile Include="vendor\cpr\threadpool.cpp" />
+    <ClCompile Include="vendor\cpr\timeout.cpp" />
+    <ClCompile Include="vendor\cpr\unix_socket.cpp" />
+    <ClCompile Include="vendor\cpr\util.cpp" />
+    <ClCompile Include="vendor\imgui\backend\imgui_impl_dx9.cpp" />
+    <ClCompile Include="vendor\imgui\backend\imgui_impl_win32.cpp" />
+    <ClCompile Include="vendor\imgui\imgui.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_demo.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_draw.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_tables.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\core\menu.h" />
+    <ClInclude Include="vendor\cpr\accept_encoding.h" />
+    <ClInclude Include="vendor\cpr\api.h" />
+    <ClInclude Include="vendor\cpr\async.h" />
+    <ClInclude Include="vendor\cpr\auth.h" />
+    <ClInclude Include="vendor\cpr\bearer.h" />
+    <ClInclude Include="vendor\cpr\body.h" />
+    <ClInclude Include="vendor\cpr\callback.h" />
+    <ClInclude Include="vendor\cpr\connect_timeout.h" />
+    <ClInclude Include="vendor\cpr\cookies.h" />
+    <ClInclude Include="vendor\cpr\cpr.h" />
+    <ClInclude Include="vendor\cpr\cprtypes.h" />
+    <ClInclude Include="vendor\cpr\cprver.h" />
+    <ClInclude Include="vendor\cpr\curlholder.h" />
+    <ClInclude Include="vendor\cpr\curl_container.h" />
+    <ClInclude Include="vendor\cpr\error.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\api.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\auth.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\bearer.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\body.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\callback.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\connect_timeout.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\cookies.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\cpr.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\cprtypes.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\curlholder.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\curl_container.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\digest.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\error.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\limit_rate.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\low_speed.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\max_redirects.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\multipart.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\ntlm.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\parameters.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\payload.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\proxies.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\response.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\session.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\ssl_options.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\status_codes.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\timeout.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\unix_socket.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\user_agent.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\util.h" />
+    <ClInclude Include="vendor\cpr\full_includes\cpr\verbose.h" />
+    <ClInclude Include="vendor\cpr\full_includes\curl\curl.h" />
+    <ClInclude Include="vendor\cpr\full_includes\curl\curlver.h" />
+    <ClInclude Include="vendor\cpr\full_includes\curl\easy.h" />
+    <ClInclude Include="vendor\cpr\full_includes\curl\mprintf.h" />
+    <ClInclude Include="vendor\cpr\full_includes\curl\multi.h" />
+    <ClInclude Include="vendor\cpr\full_includes\curl\options.h" />
+    <ClInclude Include="vendor\cpr\full_includes\curl\stdcheaders.h" />
+    <ClInclude Include="vendor\cpr\full_includes\curl\system.h" />
+    <ClInclude Include="vendor\cpr\full_includes\curl\typecheck-gcc.h" />
+    <ClInclude Include="vendor\cpr\full_includes\curl\urlapi.h" />
+    <ClInclude Include="vendor\cpr\full_includes\zconf.h" />
+    <ClInclude Include="vendor\cpr\full_includes\zlib.h" />
+    <ClInclude Include="vendor\cpr\http_version.h" />
+    <ClInclude Include="vendor\cpr\interceptor.h" />
+    <ClInclude Include="vendor\cpr\interface.h" />
+    <ClInclude Include="vendor\cpr\limit_rate.h" />
+    <ClInclude Include="vendor\cpr\local_port.h" />
+    <ClInclude Include="vendor\cpr\local_port_range.h" />
+    <ClInclude Include="vendor\cpr\low_speed.h" />
+    <ClInclude Include="vendor\cpr\multipart.h" />
+    <ClInclude Include="vendor\cpr\parameters.h" />
+    <ClInclude Include="vendor\cpr\payload.h" />
+    <ClInclude Include="vendor\cpr\proxies.h" />
+    <ClInclude Include="vendor\cpr\proxyauth.h" />
+    <ClInclude Include="vendor\cpr\range.h" />
+    <ClInclude Include="vendor\cpr\redirect.h" />
+    <ClInclude Include="vendor\cpr\reserve_size.h" />
+    <ClInclude Include="vendor\cpr\response.h" />
+    <ClInclude Include="vendor\cpr\session.h" />
+    <ClInclude Include="vendor\cpr\singleton.h" />
+    <ClInclude Include="vendor\cpr\ssl_ctx.h" />
+    <ClInclude Include="vendor\cpr\ssl_options.h" />
+    <ClInclude Include="vendor\cpr\status_codes.h" />
+    <ClInclude Include="vendor\cpr\threadpool.h" />
+    <ClInclude Include="vendor\cpr\timeout.h" />
+    <ClInclude Include="vendor\cpr\unix_socket.h" />
+    <ClInclude Include="vendor\cpr\user_agent.h" />
+    <ClInclude Include="vendor\cpr\util.h" />
+    <ClInclude Include="vendor\cpr\verbose.h" />
+    <ClInclude Include="vendor\curl\curl.h" />
+    <ClInclude Include="vendor\curl\curlver.h" />
+    <ClInclude Include="vendor\curl\easy.h" />
+    <ClInclude Include="vendor\curl\mprintf.h" />
+    <ClInclude Include="vendor\curl\multi.h" />
+    <ClInclude Include="vendor\curl\options.h" />
+    <ClInclude Include="vendor\curl\stdcheaders.h" />
+    <ClInclude Include="vendor\curl\system.h" />
+    <ClInclude Include="vendor\curl\typecheck-gcc.h" />
+    <ClInclude Include="vendor\curl\urlapi.h" />
+    <ClInclude Include="vendor\imgui\backend\imgui_impl_dx9.h" />
+    <ClInclude Include="vendor\imgui\backend\imgui_impl_win32.h" />
+    <ClInclude Include="vendor\imgui\imconfig.h" />
+    <ClInclude Include="vendor\imgui\imgui.h" />
+    <ClInclude Include="vendor\imgui\imgui_internal.h" />
+    <ClInclude Include="vendor\imgui\imstb_rectpack.h" />
+    <ClInclude Include="vendor\imgui\imstb_textedit.h" />
+    <ClInclude Include="vendor\imgui\imstb_truetype.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
