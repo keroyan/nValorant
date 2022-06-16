@@ -1,5 +1,6 @@
 // core headers
 #include "core/menu.h"
+#include "api/auth/authentication.h"
 
 // d3d9
 #include <d3d9.h>
@@ -19,7 +20,11 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 int main()
 {
-	WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, _T("nVal"), NULL };
+    Auth auth("test123", "test1234");
+    auth.Perform();
+
+    /*
+    	WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, _T("nVal"), NULL };
 	::RegisterClassEx(&wc);
 	HWND hwnd = ::CreateWindow(wc.lpszClassName, _T("nValorant"), WS_POPUP, 0, 0, 5, 5, NULL, NULL, wc.hInstance, NULL);
 
@@ -141,6 +146,8 @@ int main()
     CleanupDeviceD3D();
     ::DestroyWindow(hwnd);
     ::UnregisterClass(wc.lpszClassName, wc.hInstance);
+    */
+
 
 	return 0;
 }
