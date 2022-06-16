@@ -21,7 +21,7 @@ nValorant is a tool made in C++ to make valorant players life easier!
   - For requests
 
 ## How it works
-explaniation soon!
+explanation soon!
 
 ## Readme
 
