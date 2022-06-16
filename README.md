@@ -3,10 +3,10 @@ nValorant is a tool made in C++ to make valorant players life easier!
 
 ## Features
 
-- Manuell Login
-- Automatic Launch (You can just run the app and click "Yes")
-- Instant Lock
-- Deselect agent even if you have already locked in
+- Automatic Login
+- Automatic Launch ( Run the game through the app )
+- Instant Lock ( Use it at your own risk as it may get you banned )
+- Deselect agent ( Use it at your own risk as it may get you banned )
 - See Teammates & opponents
   - Rank
   - Level
@@ -19,6 +19,9 @@ nValorant is a tool made in C++ to make valorant players life easier!
   - For the user interface
 - libcpr
   - For requests
+
+## How it works
+explaniation soon!
 
 ## Readme
 
