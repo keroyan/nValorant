@@ -111,7 +111,10 @@
     <ClCompile Include="vendor\cpr\util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\api\auth\authentication.cpp">
+    <ClCompile Include="src\api\player\player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\api.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -425,9 +428,6 @@
     <ClInclude Include="vendor\curl\urlapi.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\api\auth\authentication.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="vendor\json\json.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -471,6 +471,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="vendor\base64\base64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api\player\player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api\helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api\api.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

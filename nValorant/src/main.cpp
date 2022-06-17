@@ -1,6 +1,7 @@
 // core headers
 #include "core/menu.h"
-#include "api/auth/authentication.h"
+#include "api/api.h"
+#include "player/player.h"
 
 // d3d9
 #include <d3d9.h>
@@ -20,8 +21,14 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 int main()
 {
-    Auth auth("test123", "test1234");
-    auth.Perform();
+    // Get CApi class
+    CApi api;
+    if (!api.isSuccessful)
+        return EXIT_FAILURE;
+
+    CSession session(&api);
+    std::cout << session.puuid << std::endl;
+
 
     /*
     	WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, _T("nVal"), NULL };
