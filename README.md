@@ -23,6 +23,8 @@ nValorant is a app made in C++ to make valorant players life easier!
   - formatting strings
 - macaron base64
   - encoding base64
+- nlohmann/json
+  - to parse responses
 
 ## How it works
 explanation soon!
