@@ -1,5 +1,5 @@
 # nValorant
-nValorant is a tool made in C++ to make valorant players life easier!
+nValorant is a app made in C++ to make valorant players life easier!
 
 ## Features
 
@@ -29,4 +29,4 @@ explanation soon!
 
 ## Readme
 
-This tool doesn't store any of your information and uses Riot Games api to e.g instantly select an agent, this tool is not endorsed by Riot Games in any way.
+This app doesn't store any of your information and uses Riot Games api to e.g instantly select an agent, this app is not endorsed by Riot Games in any way.
