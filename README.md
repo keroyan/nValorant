@@ -19,6 +19,10 @@ nValorant is a tool made in C++ to make valorant players life easier!
   - For the user interface
 - libcpr
   - For requests
+- fmt
+  - formatting strings
+- macaron base64
+  - encoding base64
 
 ## How it works
 explanation soon!
