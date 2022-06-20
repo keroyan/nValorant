@@ -4,6 +4,9 @@ nValorant is an app made in C++ to make valorant players life easier!
 ## For developers
 I'm also making an api wrapper for c++ which can be taken and used for other projects!
 
+The api currently only supports the region EU but can be changed easily to any other, I will be adding
+a way to get the region automatically or manually choosen by the user
+
 ## Features
 
 - Automatic Login
