@@ -28,6 +28,8 @@ I'm also making an api wrapper for c++ which can be taken and used for other pro
   - encoding base64
 - nlohmann/json
   - to parse responses
+- stb_image
+  - buffer to texture
 
 ## How it works
 explanation soon!
