@@ -11,13 +11,22 @@ a way to get the region automatically or manually choosen by the user
 
 ## Features
 
-- Automatic Login
-- Automatic Launch ( Run the game through the app )
-- See Live Teammates & Opponents
-  - Rank
-  - Level
-  - and more
-- See your stats more in-deep
+## Features
+
+- In-deep analyzing technology
+    - This feature will come later on
+- Automatic authentication
+- Launcher
+- You can see
+    - The store
+    - Player
+        - Rank
+        - Progression
+        - Card/Banner
+        - and much more!
+- Automatic updater
+
+Application is in progress meaning many of these features aren't added but will be added in the feature, hence check this repo often for more updates
 
 ## Libraries
 
