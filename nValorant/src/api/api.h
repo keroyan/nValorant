@@ -14,18 +14,38 @@
 class CApi
 {
 public:
-	CApi();
+	CApi() = default;
 
+	void Connect();
 	std::string
-		riotToken,  
+		riotToken,
 		entitlementToken,
 		lockfilePassword,
 		lockfilePath,
-		lockfilePort;
+		lockfilePort,
+		playerRegion = "eu";
 
 	bool isSuccessful = false;
+
+	cpr::Response localRequest(const char* path) 
+	{
+		cpr::Response req =
+			cpr::Get(cpr::Url
+				{
+					fmt::format("https://127.0.0.1:{0}/{1}", lockfilePort, path)
+				},
+				cpr::Header
+				{
+					{
+						"Authorization", lockfilePassword
+					}
+				},
+				cpr::VerifySsl(false));
+
+		return req;
+	}
 private:
-	bool GetLockfilePath() 
+	bool GetLockfilePath()
 	{
 		char* pLocalAppData;
 		size_t len;
@@ -37,7 +57,7 @@ private:
 		// We want it in std::string form as it makes it easier and we can free the memory
 		std::string szLocalAppdata = pLocalAppData;
 		free(pLocalAppData);
-		
+
 		// Path to lockfile
 		std::string LockFile(szLocalAppdata + "\\Riot Games\\Riot Client\\Config\\lockfile");
 		if (!std::filesystem::exists(LockFile))
@@ -47,4 +67,3 @@ private:
 		return true;
 	}
 };
-

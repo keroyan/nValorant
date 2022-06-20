@@ -1,6 +1,6 @@
 #include "api.h"
 
-CApi::CApi()
+void CApi::Connect() 
 {
 	if (!GetLockfilePath())
 	{
@@ -54,18 +54,7 @@ CApi::CApi()
 
 	lockfilePort = port;
 	lockfilePassword = fmt::format("Basic {}", macaron::Base64().Encode(fmt::format("riot:{}", password)));
-	cpr::Response tokens =
-		cpr::Get(cpr::Url
-			{
-				fmt::format("https://127.0.0.1:{0}/{1}", port, "entitlements/v1/token")
-			},
-			cpr::Header
-			{
-				{
-					"Authorization", lockfilePassword
-				}
-			},
-			cpr::VerifySsl(false));
+	cpr::Response tokens = localRequest("entitlements/v1/token");
 
 	if (tokens.status_code != cpr::status::HTTP_OK)
 	{
