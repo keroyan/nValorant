@@ -1,5 +1,5 @@
 # nValorant
-nValorant is a app made in C++ to make valorant players life easier!
+nValorant is an app made in C++ to make valorant players life easier!
 
 ## For developers
 I'm also making an api wrapper for c++ which can be taken and used for other projects!
