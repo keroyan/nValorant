@@ -7,9 +7,7 @@
 #include <cpr/cpr.h>
 #include "ImAnim.h"
 
-#include <api.h>
-#include <player/player.h>
-#include <store/wallet.h>
+#include "globals.h"
 
 // Fonts
 #include "fonts/bold.h"
@@ -40,10 +38,4 @@ private:
 	bool Step(const char* title, const char* description, const char* buttonName);
 	const ImGuiWindowFlags flags = ImGuiWindowFlags_NoTitleBar;
 	ImFont* pHeaderFont;
-
-	// Api!
-	CApi api = CApi();
-	CPlayer player = CPlayer(&api);
-	CWallet wallet = CWallet(&api);
-
 };

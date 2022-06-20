@@ -21,11 +21,10 @@ CWallet::CWallet(CApi* pApi)
 	if (!pApi->isSuccessful)
 		return;
 
-	CSession session(pApi);
 	cpr::Response wallet =
 		cpr::Get(cpr::Url
 			{
-				fmt::format("https://pd.{0}.a.pvp.net/store/v1/wallet/{1}", pApi->playerRegion, session.puuid)
+				fmt::format("https://pd.{0}.a.pvp.net/store/v1/wallet/{1}", pApi->playerRegion, Session::puuid)
 			},
 			cpr::Header
 			{

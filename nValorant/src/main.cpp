@@ -1,6 +1,7 @@
 // core headers
 #include "core/menu.h"
 #include "player/player.h"
+#include "core/globals.h"
 
 // d3d9
 #include <d3d9.h>
@@ -20,36 +21,18 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 int main()
 {
-    /*
-        char buffer[MAX_PATH];
-    GetModuleFileNameA(NULL, buffer, MAX_PATH);
-    std::string::size_type pos = std::string(buffer).find_last_of("\\/");
-    std::string dir = std::string(buffer).substr(0, pos);
-    free(buffer);
+    // I do wanna always remove so if the user has removed we just get it again!
+    std::filesystem::path resourcesPath("resources\\");
+    
+    if (!std::filesystem::exists(resourcesPath))
+        std::filesystem::create_directory(resourcesPath);
 
-    if (!std::filesystem::exists(fmt::format("{}\\resources\\", dir)))
+    if (Globals::Agents.GetParsed())
     {
-        if (!std::filesystem::create_directory(fmt::format("{}\\resources\\", dir)))
-            exit(0);
+        for (auto& agent : Globals::Agents.Agents)
+            Globals::Agents.Download(agent.uuid.c_str());
     }
 
-    std::ofstream of(fmt::format("{}\\resources\\test123.png", dir), std::ios::binary);
-    cpr::Response res = cpr::Download(of, cpr::Url{ "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/displayiconsmall.png" });
-
-    std::cout << res.status_code << std::endl;
-
-    return 0;
-    
-    */
-
-    CApi api;
-    api.Connect();
-    CLoadout loadout(&api);
-    
-
-    return 0;
-
-    /*
     WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, _T("nVal"), NULL };
 	::RegisterClassEx(&wc);
 	HWND hwnd = ::CreateWindow(wc.lpszClassName, _T("nValorant"), WS_POPUP, 0, 0, 5, 5, NULL, NULL, wc.hInstance, NULL);
@@ -172,8 +155,8 @@ int main()
     CleanupDeviceD3D();
     ::DestroyWindow(hwnd);
     ::UnregisterClass(wc.lpszClassName, wc.hInstance);
-    */
- 
+    
+    return 0;
 }
 
 bool CreateDeviceD3D(HWND hWnd)

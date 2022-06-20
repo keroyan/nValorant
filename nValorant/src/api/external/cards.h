@@ -3,6 +3,7 @@
 // libs
 #include <cpr/cpr.h>
 #include <fmt/format.h>
+#include <json/json.hpp>
 
 // External
 #include <string>

@@ -111,9 +111,6 @@
     <ClCompile Include="vendor\cpr\util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\api\player\player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\api\api.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -519,6 +516,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\api\helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\globals.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

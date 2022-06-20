@@ -4,7 +4,7 @@
 
 namespace Helper 
 {
-	std::string GetExecutablePath() 
+	inline std::string GetExecutablePath() 
 	{
 		char buffer[MAX_PATH];
 		GetModuleFileNameA(NULL, buffer, MAX_PATH);
