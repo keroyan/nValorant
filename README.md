@@ -49,4 +49,4 @@ explanation soon!
 
 ## Readme
 
-This app doesn't store any of your information and uses Riot Games api to e.g instantly select an agent, this app is not endorsed by Riot Games in any way.
+This app doesn't store any of your information and uses Riot Games api to e.g show your store, this app is not endorsed by Riot Games in any way.
