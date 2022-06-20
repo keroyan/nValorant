@@ -16,7 +16,7 @@ I'm also making an api wrapper for c++ which can be taken and used for other pro
   - and more
 - See your stats more in deep
 
-## Libaries
+## Libraries
 
 - ImGui
   - For the user interface
