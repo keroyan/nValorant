@@ -1,7 +1,7 @@
 # nValorant
 nValorant is an app that helps you analyze, learn about your game at blazing speeds with in-deep stats and all made in modern C++
 <hr>
-**Note** that this app is in it's early stages and is probably not usable!
+<strong>Note</strong> that this app is in it's early stages and is probably not usable!
 
 ## For developers
 I'm also making an api wrapper for c++ which can be taken and used for other projects!
