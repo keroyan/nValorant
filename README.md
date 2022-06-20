@@ -20,13 +20,14 @@ a way to get the region automatically or manually choosen by the user
 - You can see
     - The store
     - Player
+        - Friends
         - Rank
         - Progression
         - Card/Banner
         - and much more!
 - Automatic updater
 
-Application is in progress meaning many of these features aren't added but will be added in the feature, hence check this repo often for more updates
+Application is in progress meaning many of these features aren't added but will be added in the feature, hence check this repo often for more updates.
 
 ## Libraries
 
